@@ -134,6 +134,7 @@ class BaseApi extends Api {
    */
   protected function _checkAuth() {
   
+    /**
     $headers = getallheaders();
 
     if (\PhalApi\DI()->config->get('app.env') == 'pro') {
@@ -149,6 +150,7 @@ class BaseApi extends Api {
       }
 
     }
+     */
   
   }
 
