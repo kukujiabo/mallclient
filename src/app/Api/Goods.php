@@ -1,0 +1,158 @@
+<?php
+namespace App\Api;
+
+/**
+ * 商品接口
+ *
+ * @author Meroc Chen <398515393@qq.com> 2018-03-09
+ */
+class Goods extends BaseApi {
+
+  public function getRules() {
+  
+    return $this->rules(array(
+    
+      'getList' => array(
+      
+        'index_show' => 'index_show|int|false||首页展示',
+
+        'category_id' => 'category_id|int|false||分类id',
+
+        'brand_id' => 'brand_id|int|false||品牌id',
+
+        'goods_name' => 'goods_name|string|false||商品名称',
+
+        'page' => 'page|int|false|1|页码',
+
+        'page_size' => 'page_size|int|false|20|每页数据条数'
+      
+      ),
+
+      'getDetail' => array(
+      
+        'goods_id' => 'goods_id|int|true||商品id'
+      
+      ),
+
+      'getSkuDetail' => array(
+      
+        'sku_id' => 'sku_id|int|true||商品sku id'
+      
+      ),
+
+      'getGoodsAttributeCombineValueList' => array(
+      
+        'goods_id' => 'goods_id|int|true||商品id，必传'
+      
+      ),
+    
+      'getGoodsSku' => array(
+      
+        'goods_id' => 'goods_id|int|true||商品id'
+      
+      ),
+
+      'pay' => array(
+      
+        'token' => 'token|string|false||用户令牌（way为1则必传）',
+
+        'shop_id' => 'shop_id|int|true||卖家店铺id',
+
+        'address_id' => 'address_id|int|true||收货地址id',
+
+        'goods_id' => 'goods_id|int|true||商品ID',
+
+        'sku_id' => 'sku_id|int|false||商品skuID',
+
+        'quantity' => 'quantity|int|true||商品数量',
+
+        'user_money' => 'user_money|float|false||使用的余额',
+
+        'point' => 'point|int|false||使用的积分',
+
+        'buyer_message' => 'buyer_message|string|false||买家附言（备注）',
+
+        'buyer_invoice' => 'buyer_invoice|string|false||买家发票信息',
+
+        'coupon_id' => 'coupon_id|int|false||使用的优惠券id',
+      
+      )
+
+    ));
+  
+  }
+
+  /**
+   * 商品列表接口
+   *
+   * @return array list
+   */
+  public function getList() {
+  
+    return $this->dm->getList($this->retriveRuleParams(__FUNCTION__));
+  
+  }
+
+  /**
+   * 商品详情
+   * @desc 商品详情
+   *
+   * @return array info
+   */
+  public function getDetail() {
+
+    return $this->dm->getDetail($this->retriveRuleParams(__FUNCTION__)); 
+  
+  }
+
+  /**
+   * 查询商品列表
+   * @desc 查询商品列表
+   *
+   * @return int ret 操作状态：200表示成功
+   * @return array data[] 结果参数集
+   * @return string msg 错误提示
+   */
+  public function getGoodsAttributeCombineValueList() {
+  
+    return $this->dm->getGoodsAttributeCombineValueList($this->retriveRuleParams(__FUNCTION__));
+  
+  }
+
+  /**
+   * 查询商品sku
+   * @desc 查询商品sku
+   *
+   * @return int ret 
+   */
+  public function getSkuGoods() {
+  
+    return $this->dm->getSkuGoods($this->retriveRuleParams(__FUNCTION__));
+  
+  }
+
+  /**
+   * 查询sku详情
+   * @desc 查询sku详情
+   *
+   * @return int 
+   */
+  public function getSkuDetail() {
+  
+    return $this->dm->getSkuDetail($this->retriveRuleParams(__FUNCTION__));
+  
+  }
+
+  /**
+   * 结算
+   * @desc 结算
+   *
+   * @return
+   */
+  public function pay() {
+  
+    return $this->dm->pay($this->retriveRuleParams(__FUNCTION__));
+  
+  }
+
+}
