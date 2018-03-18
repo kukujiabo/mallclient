@@ -18,6 +18,14 @@ class Location extends BaseApi {
 
         'longitude' => 'longitude|string|true||经度',
       
+      ),
+
+      'getCity' => array(
+      
+        'name' => 'name|string|false||城市名称',
+      
+        'id' => 'id|int|false||城市id'
+      
       )
     
     ));
@@ -46,6 +54,20 @@ class Location extends BaseApi {
     $params = $this->retriveRuleParams('getAddress');
 
     return $this->dm->getAddress($params);
+  
+  }
+
+  /**
+   * 查询城市列表
+   * @desc 查询城市列表
+   *
+   * @return array list
+   */
+  public function getCity() {
+  
+    $params = $this->retriveRuleParams('getAddress');  
+
+    return $this->dm->getCity($params);
   
   }
 

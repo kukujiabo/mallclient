@@ -12,4 +12,10 @@ class LocationDm {
   
   }
 
+  public function getCity($params) {
+  
+    return \App\apiRequest('App.NationwideArea.QueryCity', $params);
+  
+  }
+
 }
