@@ -65,7 +65,7 @@ class Location extends BaseApi {
    */
   public function getCity() {
   
-    $params = $this->retriveRuleParams('getAddress');  
+    $params = $this->retriveRuleParams('getCity');  
 
     return $this->dm->getCity($params);
   
