@@ -50,6 +50,16 @@ class Cart extends BaseApi {
 
         'page_size' => 'page_size|int|true|20|每页数据条数'
       
+      ),
+
+      'updateCart' => array(
+      
+        'token' => 'token|string|true||用户令牌',
+        
+        'cart_id' => 'cart_id|int|true||购物车id',
+      
+        'num' => 'num|int|true||商品数量'
+      
       )
     
     ));
@@ -77,6 +87,18 @@ class Cart extends BaseApi {
   public function getList() {
   
     return $this->dm->getList($this->retriveRuleParams(__FUNCTION__));
+  
+  }
+
+  /**
+   * 更新购物车商品
+   * @desc 更新购物车商品
+   *
+   * @return int
+   */
+  public function updateCart() {
+  
+    return $this->dm->updateCart($this->retriveRuleParams(__FUNCTION__)); 
   
   }
 

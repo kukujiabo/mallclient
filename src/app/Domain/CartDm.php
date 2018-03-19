@@ -29,4 +29,15 @@ class CartDm {
 
   }
 
+  /**
+   * 更新购物车
+   */
+  public function updateCart($params) {
+  
+    $params['way'] = 1;
+  
+    return \App\apiRequest('App.CartTakeout.Update', $params);
+  
+  }
+
 }
