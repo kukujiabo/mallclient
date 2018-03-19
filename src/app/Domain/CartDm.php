@@ -9,7 +9,6 @@ class CartDm {
 
   /**
    * 添加商品到购物车
-   *
    */
   public function addToCart($params) {
   
@@ -17,6 +16,17 @@ class CartDm {
   
     return \App\apiRequest('App.CartTakeOut.Add', $params);
   
+  }
+
+  /**
+   * 查询购物车列表
+   */
+  public function getList($params) {
+  
+    $params['way'] = 1;
+  
+    return \App\apiRequest('App.CartTakeOut.queryList', $params); 
+
   }
 
 }

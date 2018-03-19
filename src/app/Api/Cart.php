@@ -38,6 +38,18 @@ class Cart extends BaseApi {
 
         'bl_id' => 'bl_id|int|false||组合套装ID'
       
+      ),
+
+      'getList' => array(
+      
+        'token' => 'token|string|false||用户令牌（way为1则必传）',
+
+        'order' => 'order|string|false||排序',
+
+        'page' => 'page|int|true|1|页码',
+
+        'page_size' => 'page_size|int|true|20|每页数据条数'
+      
       )
     
     ));
@@ -53,6 +65,18 @@ class Cart extends BaseApi {
   public function addToCart() {
   
     return $this->dm->addToCart($this->retriveRuleParams(__FUNCTION__));
+  
+  }
+
+  /**
+   * 查询购物车列表商品
+   * @desc 查询购物车列表商品
+   *
+   * @return
+   */
+  public function getList() {
+  
+    return $this->dm->getList($this->retriveRuleParams(__FUNCTION__));
   
   }
 
