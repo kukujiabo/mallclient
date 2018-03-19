@@ -40,4 +40,15 @@ class CartDm {
   
   }
 
+  /**
+   * 删除购物车
+   */
+  public function removeCart($params) {
+
+    $params['way'] = 1;
+  
+    return \App\apiRequest('App.CartTakeOut.remove', $params);
+  
+  }
+
 }

@@ -60,6 +60,14 @@ class Cart extends BaseApi {
       
         'num' => 'num|int|true||商品数量'
       
+      ),
+
+      'removeCart' => array(
+      
+        'token' => 'token|string|true||用户令牌',
+
+        'cart_id' => 'cart_id|int|true||购物车id'
+      
       )
     
     ));
@@ -99,6 +107,18 @@ class Cart extends BaseApi {
   public function updateCart() {
   
     return $this->dm->updateCart($this->retriveRuleParams(__FUNCTION__)); 
+  
+  }
+
+  /**
+   * 删除购物车商品
+   * @desc 删除购物车商品
+   *
+   * @return int
+   */
+  public function removeCart() {
+  
+    return $this->dm->removeCart($this->retriveRuleParams(__FUNCTION__));
   
   }
 
