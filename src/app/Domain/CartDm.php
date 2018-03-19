@@ -36,7 +36,7 @@ class CartDm {
   
     $params['way'] = 1;
   
-    return \App\apiRequest('App.CartTakeout.Update', $params);
+    return \App\apiRequest('App.CartTakeOut.Update', $params);
   
   }
 
