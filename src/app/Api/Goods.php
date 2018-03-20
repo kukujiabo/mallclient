@@ -52,7 +52,7 @@ class Goods extends BaseApi {
 
         'city_code' => 'city_code|int|false||城市代码',
 
-        'user_level' => 'user_level|int|false|用户等级',
+        'user_level' => 'user_level|int|false|用户等级'
 
       
       ),
@@ -69,7 +69,7 @@ class Goods extends BaseApi {
       
         'city_code' => 'city_code|int|false||城市代码',
 
-        'user_level' => 'user_level|int|false|用户等级',
+        'user_level' => 'user_level|int|false|用户等级'
         
       ),
 
