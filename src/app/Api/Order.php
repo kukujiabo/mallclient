@@ -19,6 +19,18 @@ class Order extends BaseApi {
 
         'order_id' => 'order_id|string|true||用户订单号'
       
+      ),
+
+      'orderList' => array(
+      
+        'token' => 'token|string|true||用户令牌',
+
+        'order_status' => 'order_status|int|false||订单状态',
+
+        'page' => 'page|int|false|1|页码',
+
+        'page_size' => 'page_size|int|false|6|每页条数'
+      
       )
     
     ));
@@ -34,6 +46,18 @@ class Order extends BaseApi {
   public function getOrderDetail() {
   
     return $this->dm->getOrderDetail($this->retriveRuleParams(__FUNCTION__));
+  
+  }
+
+  /**
+   * 获取用户订单列表
+   * @desc 获取用户订单列表
+   *
+   * @return list
+   */
+  public function orderList() {
+  
+    return $this->dm->orderList($this->retriveRuleParams(__FUNCTION__));
   
   }
 

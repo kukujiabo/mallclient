@@ -9,4 +9,10 @@ class OrderDm {
   
   }
 
+  public function orderList($params) {
+  
+    return \App\apiRequest('App.OrderTakeOut.OrderList', $params);
+  
+  }
+
 }
