@@ -48,7 +48,12 @@ class Goods extends BaseApi {
 
       'getSkuDetail' => array(
       
-        'sku_id' => 'sku_id|int|true||商品sku id'
+        'sku_id' => 'sku_id|int|true||商品sku id',
+
+        'city_code' => 'city_code|int|false||城市代码',
+
+        'user_level' => 'user_level|int|false|用户等级',
+
       
       ),
 
@@ -60,8 +65,12 @@ class Goods extends BaseApi {
     
       'getGoodsSku' => array(
       
-        'goods_id' => 'goods_id|int|true||商品id'
+        'goods_id' => 'goods_id|int|true||商品id',
       
+        'city_code' => 'city_code|int|false||城市代码',
+
+        'user_level' => 'user_level|int|false|用户等级',
+        
       ),
 
       'pay' => array(
