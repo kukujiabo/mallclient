@@ -63,7 +63,7 @@ class Goods extends BaseApi {
       
       ),
     
-      'getGoodsSku' => array(
+      'getSkuGoods' => array(
       
         'goods_id' => 'goods_id|int|true||商品id',
       
