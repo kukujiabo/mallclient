@@ -13,6 +13,10 @@ class Goods extends BaseApi {
     return $this->rules(array(
     
       'getList' => array(
+
+        'city_code' => 'city_code|int|false||城市代码',
+
+        'user_level' => 'user_level|int|false|用户等级',
       
         'index_show' => 'index_show|int|false||首页展示',
 
@@ -33,6 +37,10 @@ class Goods extends BaseApi {
       ),
 
       'getDetail' => array(
+      
+        'city_code' => 'city_code|int|false||城市代码',
+
+        'user_level' => 'user_level|int|false|用户等级',
       
         'goods_id' => 'goods_id|int|true||商品id'
       
