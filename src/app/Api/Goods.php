@@ -76,6 +76,28 @@ class Goods extends BaseApi {
 
         'coupon_id' => 'coupon_id|int|false||使用的优惠券id',
       
+      ),
+
+      'cartPay' => array(
+      
+        'way' => 'way|int|true|1|途径 1-前台会员 2-后台管理员',
+
+        'token' => 'token|string|false||用户令牌（way为1则必传）',
+
+        'buyer_id' => 'buyer_id|int|false||用户id（way为2则必传）',
+
+        'shop_id' => 'shop_id|int|true||卖家店铺id',
+
+        'address_id' => 'address_id|int|true||收货地址id',
+
+        'cart_id' => 'cart_id|string|true||购物车商品id（英文逗号隔开）',
+
+        'user_money' => 'user_money|float|false||使用的余额',
+
+        'point' => 'point|int|false||使用的积分',
+
+        'buyer_message' => 'buyer_message|string|false||买家附言（备注）'
+
       )
 
     ));
@@ -152,6 +174,18 @@ class Goods extends BaseApi {
   public function pay() {
   
     return $this->dm->pay($this->retriveRuleParams(__FUNCTION__));
+  
+  }
+
+  /**
+   * 购物车结算
+   * @desc 购物车结算
+   *
+   * @return
+   */
+  public function cartPay() {
+  
+    return $this->dm->cartPay($this->retriveRuleParams(__FUNCTION__));
   
   }
 

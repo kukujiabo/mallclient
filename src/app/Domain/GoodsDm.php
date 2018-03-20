@@ -120,4 +120,12 @@ class GoodsDm {
   
   }
 
+  public function cartPay($data) {
+
+    $data['way'] = 1;
+
+    return \App\apiRequest('App.OrderTakeOut.Add', $data);
+
+  }
+
 }
