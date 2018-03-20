@@ -22,6 +22,10 @@ class Goods extends BaseApi {
 
         'goods_name' => 'goods_name|string|false||商品名称',
 
+        'city_code' => 'city_code|int|false||城市代码',
+
+        'user_level' => 'user_level|int|false||用户等级',
+
         'page' => 'page|int|false|1|页码',
 
         'page_size' => 'page_size|int|false|20|每页数据条数'
