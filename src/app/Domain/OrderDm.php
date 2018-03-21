@@ -15,4 +15,10 @@ class OrderDm {
   
   }
 
+  public function rebuyOrder($params) {
+  
+    return \App\apiRequest('App.OrderTakeOut.RebuyOrder', $params); 
+  
+  }
+
 }
