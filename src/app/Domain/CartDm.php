@@ -51,4 +51,15 @@ class CartDm {
   
   }
 
+  /**
+   * 购物车数量
+   */
+  public function cartCount($params) {
+
+    $params['way'] = 1;
+  
+    return \App\apiRequest('App.CartTakeOut.QueryCount', $params);
+  
+  }
+
 }

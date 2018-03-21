@@ -68,6 +68,12 @@ class Cart extends BaseApi {
 
         'cart_id' => 'cart_id|int|true||购物车id'
       
+      ),
+
+      'cartCount' => array(
+      
+        'token' => 'token|string|true||用户令牌',
+      
       )
     
     ));
@@ -119,6 +125,18 @@ class Cart extends BaseApi {
   public function removeCart() {
   
     return $this->dm->removeCart($this->retriveRuleParams(__FUNCTION__));
+  
+  }
+
+  /**
+   * 购物车数量
+   * @desc 购物车数量
+   *
+   * @return int 
+   */
+  public function cartCount() {
+  
+    return $this->dm->cartCount($this->retriveRuleParams(__FUNCTION__));
   
   }
 
