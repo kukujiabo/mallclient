@@ -25,6 +25,8 @@ class Order extends BaseApi {
       
         'token' => 'token|string|true||用户令牌',
 
+        'keyword' => 'keyword|string|true||关键字',
+
         'order_status' => 'order_status|int|false||订单状态',
 
         'page' => 'page|int|false|1|页码',
