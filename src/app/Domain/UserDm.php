@@ -65,8 +65,6 @@ class UserDm {
 
         $auth = $this->memberLogin($data);
 
-        return $auth;
-
         $userinfo = $this->getMemberDetailInfo($auth);
 
         $response = array(
