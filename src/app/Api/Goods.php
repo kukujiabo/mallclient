@@ -96,6 +96,8 @@ class Goods extends BaseApi {
         'buyer_invoice' => 'buyer_invoice|string|false||买家发票信息',
 
         'coupon_id' => 'coupon_id|int|false||使用的优惠券id',
+
+        'city_code' => 'city_code|int|false||城市编码'
       
       ),
 
@@ -117,7 +119,9 @@ class Goods extends BaseApi {
 
         'point' => 'point|int|false||使用的积分',
 
-        'buyer_message' => 'buyer_message|string|false||买家附言（备注）'
+        'buyer_message' => 'buyer_message|string|false||买家附言（备注）',
+
+        'city_code' => 'city_code|int|false||城市编码'
 
       )
 
