@@ -31,7 +31,7 @@ class Order extends BaseApi {
 
         'page' => 'page|int|false|1|页码',
 
-        'page_size' => 'page_size|int|false|6|每页条数'
+        'page_size' => 'page_size|int|false|100|每页条数'
       
       ),
 
