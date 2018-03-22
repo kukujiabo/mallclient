@@ -36,7 +36,9 @@ class Cart extends BaseApi {
 
         'goods_picture' => 'goods_picture|string|false||商品图片',
 
-        'bl_id' => 'bl_id|int|false||组合套装ID'
+        'bl_id' => 'bl_id|int|false||组合套装ID',
+
+        'city_code' => 'city_code|int|false||城市编码'
       
       ),
 
