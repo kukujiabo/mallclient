@@ -38,6 +38,8 @@ class Order extends BaseApi {
       'rebuyOrder' => array(
       
         'token' => 'token|string|true||用户令牌',
+
+        'city_code' => 'city_code|int|true||城市编码',
       
         'order_id' => 'order_id|string|true||用户订单id'
       
