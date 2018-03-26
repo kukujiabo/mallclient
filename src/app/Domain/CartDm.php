@@ -62,4 +62,15 @@ class CartDm {
   
   }
 
+  /**
+   * 清空购物车
+   */
+  public function emptyCart($params) {
+
+    $params['way'] = 1;
+  
+    return \App\apiRequest('App.CartTakeOut.CartEmpty', $params);
+  
+  }
+
 }

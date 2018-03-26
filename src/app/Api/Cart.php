@@ -76,6 +76,12 @@ class Cart extends BaseApi {
       
         'token' => 'token|string|true||用户令牌',
       
+      ),
+
+      'emptyCart' => array(
+      
+        'token'  => 'token|string|true||用户令牌'
+      
       )
     
     ));
@@ -141,5 +147,18 @@ class Cart extends BaseApi {
     return $this->dm->cartCount($this->retriveRuleParams(__FUNCTION__));
   
   }
+
+  /**
+   * 清空购物车
+   * @desc 清空购物车
+   *
+   * @return int
+   */
+  public function emptyCart() {
+
+    return $this->dm->emptyCart($this->retriveRuleParams(__FUNCTION__));
+
+  }
+
 
 }
