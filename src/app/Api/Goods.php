@@ -30,6 +30,8 @@ class Goods extends BaseApi {
 
         'user_level' => 'user_level|int|false||用户等级',
 
+        'state' => 'state|int|false||状态',
+
         'page' => 'page|int|false|1|页码',
 
         'page_size' => 'page_size|int|false|20|每页数据条数'
