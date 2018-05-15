@@ -43,7 +43,7 @@ class User extends BaseApi {
 				'user_headimg' => 'user_headimg|string|false||头像',
 				'nick_name' => 'nick_name|string|false||昵称',
 				'openid' => 'openid|string|false||微信的OPENID',
-                'phone' =>  'phone|string|false||手机号码',
+                'user_tel' =>  'usre_tel|string|false||手机号码',
                 'sex' => 'sex|int|false|0|性别 0 保密 1男  2 女',
                 'date' => 'date|date|false||生日',
 				// 'province' => 'province|string|false||省',
