@@ -514,7 +514,7 @@ class UserDm {
         if (isset($data['sex']) && $data['sex'] !=''){
             $params['sex'] = $data['sex'] ;
         }
-        if (isset($data['user_tel'] && $data['user_tel'] != '')) {
+        if (isset($data['user_tel']) && $data['user_tel'] != '') {
             $params['user_tel'] = $data['user_tel'];
         }
 
