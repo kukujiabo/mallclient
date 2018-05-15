@@ -156,12 +156,12 @@ class User extends BaseApi {
                 'user_headimg' => 'user_headimg|string|false||用户头像',
                 'real_name' => 'real_name|string|false||真实姓名',
                 'nick_name' => 'nick_name|string|false||昵称',
+                'user_tel' => 'user_tel|string|false||手机号',
                 'birthday' => 'birthday|string|false||会员生日 ',
                 'location' => 'location|string|false||所在地',
                 'sex' => 'sex|int|false||性别0-保密 1-男 2-女'
-
-
             ),
+
             'memberDetail' => array(
                 'token' => 'token|string|true||用户token',
 

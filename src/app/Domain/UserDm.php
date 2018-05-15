@@ -514,6 +514,9 @@ class UserDm {
         if (isset($data['sex']) && $data['sex'] !=''){
             $params['sex'] = $data['sex'] ;
         }
+        if (isset($data['user_tel'] && $data['user_tel'] != '') {
+            $params['user_tel'] = $data['user_tel'];
+        }
 
 
         $res = \App\apiRequest('App.Member.Update',$params);
