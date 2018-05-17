@@ -171,7 +171,8 @@ class UserDm {
       'sex' => $res['sex'],
       'birthday' => $res['birthday'],
       'location' => $res['location'],
-      'nick_name' => $res['nick_name']
+      'nick_name' => $res['nick_name'],
+      'provider' => $res['provider']
     );
   
     return $mapping;
