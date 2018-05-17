@@ -36,7 +36,7 @@ class Goods extends BaseApi {
 
         'page' => 'page|int|false|1|页码',
 
-        'page_size' => 'page_size|int|false|20|每页数据条数'
+        'page_size' => 'page_size|int|false|100|每页数据条数'
       
       ),
 
