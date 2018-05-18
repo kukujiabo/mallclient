@@ -23,7 +23,7 @@ class GoodsDm {
 
     $category = \App\apiRequest('App.GoodsCategory.GetDetail', array('category_id' => $good['category_id']));
 
-    $goodImages = \App\apiRequest('App.GoodsImages.GetAll', array('goods_id' => $good['goods_id']));
+    $goodImages = \App\apiRequest('App.GoodsImages.GetAll', array('goods_id' => $good['goods_id'], 'status' => 1));
 
     $good['brand'] = $brand;
 
