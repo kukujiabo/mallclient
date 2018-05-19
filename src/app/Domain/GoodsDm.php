@@ -49,6 +49,7 @@ class GoodsDm {
    */
   public function getGoodsAttributeCombineValueList($data) {
   
+    $data['active'] = 1;
     /**
      * 获取规格列表
      */
