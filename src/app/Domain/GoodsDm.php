@@ -108,6 +108,8 @@ class GoodsDm {
   }
 
   public function getSkuGoods($data) {
+
+    $data['active'] = 1;
   
     return \App\apiRequest('App.GoodsSku.GetAll', $data); 
   
