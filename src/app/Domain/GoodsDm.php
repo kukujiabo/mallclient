@@ -7,6 +7,8 @@ class GoodsDm {
    * 查询列表
    */
   public function getList($params) {
+
+    $params['order'] = 'sort desc';
   
     return \App\apiRequest('App.Goods.QueryList', $params); 
   
