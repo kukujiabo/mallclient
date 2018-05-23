@@ -599,7 +599,7 @@ class UserDm {
    *
    * @return array $list
    */
-  public function getQrCode($data) {
+  public function getMiniQrCode($data) {
   
     return \App\apiRequest('App.Wechat.GetMiniTempCode', $data);
   
