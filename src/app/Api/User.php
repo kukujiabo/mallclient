@@ -198,7 +198,7 @@ class User extends BaseApi {
              
              ),
 
-             'getQrCode' => array(
+             'getMiniQrCode' => array(
              
                'token' => 'token|string|true||用户令牌'
              
@@ -567,14 +567,14 @@ class User extends BaseApi {
     }
 
     /**
-     * 获取二维码
-     * @desc 获取二维码
+     * 获取小程序码
+     * @desc 获取小程序码
      *
      * @return string path
      */
-    public function getQrCode() {
+    public function getMiniQrCode() {
     
-      return $this->dm->getQrCode($this->retriveRuleParams(__FUNCTION__));
+      return $this->dm->getMiniQrCode($this->retriveRuleParams(__FUNCTION__));
     
     }
 
