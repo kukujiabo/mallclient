@@ -592,4 +592,17 @@ class UserDm {
   
   }
 
+  /**
+   * 获取用户推荐二维码
+   *
+   * @param array $data
+   *
+   * @return array $list
+   */
+  public function getQrCode($data) {
+  
+    return \App\apiRequest('App.Wechat.GetMiniTempCode', $data);
+  
+  }
+
 }

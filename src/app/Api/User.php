@@ -197,6 +197,12 @@ class User extends BaseApi {
                'page_size' => 'page_size|int|false|4|每页数据条数'
              
              ),
+
+             'getQrCode' => array(
+             
+               'token' => 'token|string|true||用户令牌'
+             
+             )
         ));
     }
     /**
@@ -557,6 +563,18 @@ class User extends BaseApi {
     public function changePhone() {
     
       return $this->dm->changePhone($this->retriveRuleParams(__FUNCTION__));
+    
+    }
+
+    /**
+     * 获取二维码
+     * @desc 获取二维码
+     *
+     * @return string path
+     */
+    public function getQrCode() {
+    
+      return $this->dm->getQrCode($this->retriveRuleParams(__FUNCTION__));
     
     }
 
