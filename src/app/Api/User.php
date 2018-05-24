@@ -29,6 +29,7 @@ class User extends BaseApi {
 			//微信登陆 
 			'wxLogin' => array(
 				'code' => 'code|string|true||用户CODE',
+				'recommend' => 'recommend|string|false||推荐用户id',
 			),
 			//新增用户
             'add' => array(

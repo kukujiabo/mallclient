@@ -89,6 +89,12 @@ class UserDm {
   public function memberLogin($data) {
   
    $params = array('code' => $data['code']);
+
+   if ($data['recommend']) {
+   
+     $params['recommend'] = $data['recommend'];
+   
+   }
    
    $res = \App\apiRequest('App.Member.Login', $params);
 
