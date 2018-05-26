@@ -43,6 +43,13 @@ class Order extends BaseApi {
       
         'order_id' => 'order_id|string|true||用户订单id'
       
+      ),
+
+      'removeOrder' => array(
+      
+        'token' => 'token|string|true||用户令牌',
+        'order_id' => 'order_id|string|true||用户订单id'
+      
       )
     
     ));
@@ -82,6 +89,12 @@ class Order extends BaseApi {
   public function rebuyOrder() {
   
     return $this->dm->rebuyOrder($this->retriveRuleParams(__FUNCTION__));
+  
+  }
+
+  public function removeOrder() {
+  
+    return $this->dm->removeOrder($this->retriveRuleParams(__FUNCTION__));
   
   }
 
