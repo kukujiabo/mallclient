@@ -46,6 +46,8 @@ class Cart extends BaseApi {
       
         'token' => 'token|string|false||用户令牌（way为1则必传）',
 
+        'selected_id' => 'selected_id|string|false||选中的商品',
+
         'order' => 'order|string|false||排序',
 
         'page' => 'page|int|true|1|页码',
