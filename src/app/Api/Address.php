@@ -235,14 +235,6 @@ class Address extends BaseApi{
 
         $params = $this->retriveRuleParams(__FUNCTION__);
 
-         $regulation = array(
-         
-            'token' => 'required',
-
-         );
-
-         \App\Verification($params, $regulation);
-
         return $this->dm->getAddressDetail($params);
 
         

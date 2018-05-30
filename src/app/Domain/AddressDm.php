@@ -83,25 +83,34 @@ class AddressDm {
         $params['is_default'] = $data['default'] == true?1:2;
         
         $res = \App\apiRequest('App.UserAddress.GetAddressDetails',$params);
+
+        if (!empty($res)) {
         
-        //return $res['province_name'];
-        $return['address_id'] = $res['id'];
-        $return['name'] = $res['consigner'];
-        $return['phone'] = $res['mobile'];
-        $return['province'] = $res['province'];
-        $return['province_name'] = $res['province_name'];
-        $return['city'] = $res['city'];
-        $return['city_name'] = $res['city_name'];
-        $return['area'] = $res['district'];
-        $return['area_name'] = $res['district_name'];
-        $return['address'] = $res['address'];
-        $return['latitude'] = $res['latitude'];
-        $return['longitude'] = $res['longitude'];
-        $return['default'] = ($res['is_default'] == '1')?true:false;
-        $return['is_out_of_range'] = $res['is_out_of_range'] ? $res['is_out_of_range'] : 2;
-        $return['distance'] = $res['distance'] ? $res['distance'] : 0;
+          $return['address_id'] = $res['id'];
+          $return['name'] = $res['consigner'];
+          $return['phone'] = $res['mobile'];
+          $return['province'] = $res['province'];
+          $return['province_name'] = $res['province_name'];
+          $return['city'] = $res['city'];
+          $return['city_name'] = $res['city_name'];
+          $return['area'] = $res['district'];
+          $return['area_name'] = $res['district_name'];
+          $return['address'] = $res['address'];
+          $return['latitude'] = $res['latitude'];
+          $return['longitude'] = $res['longitude'];
+          $return['default'] = ($res['is_default'] == '1')?true:false;
+          $return['is_out_of_range'] = $res['is_out_of_range'] ? $res['is_out_of_range'] : 2;
+          $return['distance'] = $res['distance'] ? $res['distance'] : 0;
             
-        return $return;
+          return $return;
+
+        } else {
+        
+          return $res;
+        
+        }
+
+
     }
     
     public function getAddressList($data){
