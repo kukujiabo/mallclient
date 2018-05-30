@@ -21,17 +21,17 @@ class GoodsDm {
   
     $good = \App\apiRequest('App.Goods.GetDetail', $params);
 
-    $brand = \App\apiRequest('App.GoodsBrand.GetDetail', array('id' => $good['brand_id']));
+    //$brand = \App\apiRequest('App.GoodsBrand.GetDetail', array('id' => $good['brand_id']));
 
-    $category = \App\apiRequest('App.GoodsCategory.GetDetail', array('category_id' => $good['category_id']));
+    //$category = \App\apiRequest('App.GoodsCategory.GetDetail', array('category_id' => $good['category_id']));
 
-    $goodImages = \App\apiRequest('App.GoodsImages.GetAll', array('goods_id' => $good['goods_id'], 'status' => 1));
+    //$goodImages = \App\apiRequest('App.GoodsImages.GetAll', array('goods_id' => $good['goods_id'], 'status' => 1));
 
-    $good['brand'] = $brand;
+    //$good['brand'] = $brand;
 
-    $good['category'] = $category;
+    //$good['category'] = $category;
 
-    $good['goods_image'] = $goodImages;
+    //$good['goods_image'] = $goodImages;
 
     return $good;
   
