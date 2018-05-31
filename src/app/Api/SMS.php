@@ -54,6 +54,12 @@ class SMS extends BaseApi{
 		return $this->SMSDm->sendSMS($params);
 	}
 
+  /**
+   * 验证短信接口
+   * @desc 验证短信接口
+   *
+   * @return 
+   */
   public function checkVerifyCode() {
   
     return $this->SMSDM->checkVerifyCode($this->retriveRuleParams(__FUNCTION__));
