@@ -30,6 +30,10 @@ class SMS extends BaseApi{
                 'phone' => 'phone|string|true||手机号码',
                 'type' => 'type|string|false||类型 0-不标记 1-注册 2-旧手机验证 3-新手机验证 4-找回密码',
             ),
+            'checkVerifyCode' => array(
+                'mobile'  => 'mobile|string|true||手机号码',
+                'code'  => 'code|string|true||验证码'
+            )
         ));
     }
 	
@@ -49,4 +53,11 @@ class SMS extends BaseApi{
 		$params = $this->retriveRuleParams('sendSMS');
 		return $this->SMSDm->sendSMS($params);
 	}
+
+  public function checkVerifyCode() {
+  
+    return $this->SMSDM->checkVerifyCode($this->retriveRuleParams(__FUNCTION__));
+  
+  }
+
 }

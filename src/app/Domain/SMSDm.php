@@ -18,4 +18,11 @@ class SMSDm {
 		$res = \App\apiRequest('App.ShortMessage.Send',$param); 
         return $res ;
     }
+
+    public function checkVerifyCode($data) {
+    
+      return \App\apiRequest('App.MobileVerifyCode.CheckCode', $data);
+    
+    }
+
 }
