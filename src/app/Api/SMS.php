@@ -62,7 +62,7 @@ class SMS extends BaseApi{
    */
   public function checkVerifyCode() {
   
-    return $this->SMSDM->checkVerifyCode($this->retriveRuleParams(__FUNCTION__));
+    return $this->SMSDm->checkVerifyCode($this->retriveRuleParams(__FUNCTION__));
   
   }
 
