@@ -84,7 +84,16 @@ class Cart extends BaseApi {
       
         'token'  => 'token|string|true||用户令牌'
       
+      ),
+
+      'removeSelectedGoods' => array(
+      
+        'token'  => 'token|string|true||用户令牌',
+
+        'cart_id' => 'cart_id|string|true||购物车id'
+      
       )
+
     
     ));
   
@@ -162,5 +171,16 @@ class Cart extends BaseApi {
 
   }
 
+  /**
+   * 删除购物车选中商品
+   * @desc 删除购物车选中商品
+   *
+   * @return 
+   */
+  public function removeSelectedGoods() {
+  
+    return $this->dm->removeSelectedGoods($this->retriveRuleParams(__FUNCTION__));  
+  
+  }
 
 }

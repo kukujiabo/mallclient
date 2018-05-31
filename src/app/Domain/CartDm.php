@@ -73,4 +73,13 @@ class CartDm {
   
   }
 
+  /**
+   * 删除购物车选中商品
+   */
+  public function removeSelectedGoods($params) {
+  
+    return \App\apiRequest('App.CartTakeOut.RemoveSelectedGoods', $params);
+  
+  }
+
 }
