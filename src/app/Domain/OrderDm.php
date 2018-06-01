@@ -21,4 +21,18 @@ class OrderDm {
   
   }
 
+  public function removeOrder($params) {
+  
+    return \App\apiRequest('App.OrderTakeOut.RemoveOrder', $params); 
+  
+  }
+
+  public function orderReceived($params) {
+  
+    $params['order_statsu'] = 4;
+
+    return \App\apiRequest('App.OrderTakeOut.Update', $params);
+  
+  }
+
 }
