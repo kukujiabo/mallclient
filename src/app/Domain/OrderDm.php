@@ -29,7 +29,7 @@ class OrderDm {
 
   public function orderReceived($params) {
   
-    $params['order_statsu'] = 4;
+    $params['order_status'] = 4;
 
     $params['sign_time'] = date('Y-m-d H:i:s');
 
