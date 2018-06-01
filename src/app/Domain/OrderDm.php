@@ -31,6 +31,8 @@ class OrderDm {
   
     $params['order_statsu'] = 4;
 
+    $params['sign_time'] = date('Y-m-d H:i:s');
+
     return \App\apiRequest('App.OrderTakeOut.Update', $params);
   
   }
