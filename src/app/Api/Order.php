@@ -50,6 +50,13 @@ class Order extends BaseApi {
         'token' => 'token|string|true||用户令牌',
         'order_id' => 'order_id|string|true||用户订单id'
       
+      ),
+
+      'orderReceived' => array(
+      
+        'token' => 'token|string|true||用户令牌',
+        'order_id' => 'order_id|string|true||订单编号'
+      
       )
     
     ));
@@ -92,9 +99,27 @@ class Order extends BaseApi {
   
   }
 
+  /**
+   * 删除订单
+   * @desc 删除订单
+   *
+   * @return
+   */
   public function removeOrder() {
   
     return $this->dm->removeOrder($this->retriveRuleParams(__FUNCTION__));
+  
+  }
+
+  /**
+   * 签收订单
+   * @desc 签收订单
+   *
+   * @return 
+   */
+  public function orderReceived() {
+  
+    return $this->dm->orderReceived($this->retriveRuleParams(__FUNCTION__));
   
   }
 
