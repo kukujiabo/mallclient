@@ -37,4 +37,10 @@ class OrderDm {
   
   }
 
+  public function orderAfterSale($params) {
+  
+    return \App\request('App.OrderTakeOut.OrderAfterSale', $params); 
+  
+  }
+
 }

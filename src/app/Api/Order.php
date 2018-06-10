@@ -57,6 +57,15 @@ class Order extends BaseApi {
         'token' => 'token|string|true||用户令牌',
         'order_id' => 'order_id|string|true||订单编号'
       
+      ),
+
+      'orderAfterSale' => array(
+      
+        'token' => 'token|string|true||用户令牌',
+        'sn' => 'sn|string|true||订单编号',
+        'sku_id' => 'sku_id|true|int||skuid',
+        'num' => 'num|true|int||数量'
+      
       )
     
     ));
@@ -120,6 +129,18 @@ class Order extends BaseApi {
   public function orderReceived() {
   
     return $this->dm->orderReceived($this->retriveRuleParams(__FUNCTION__));
+  
+  }
+
+  /**
+   * 售后服务
+   * @desc 售后服务
+   *
+   * @return
+   */
+  public function orderAfterSale() {
+  
+    return $this->dm->orderAfterSale($this->retriveRuleParams(__FUNCTION__));
   
   }
 
