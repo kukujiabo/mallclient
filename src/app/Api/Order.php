@@ -64,7 +64,7 @@ class Order extends BaseApi {
         'token' => 'token|string|true||用户令牌',
         'sn' => 'sn|string|true||订单编号',
         'sku_id' => 'sku_id|int|true||skuid',
-        'num' => 'num|true|int||数量'
+        'num' => 'num|int|true||数量'
       
       )
     
