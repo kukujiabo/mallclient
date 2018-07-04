@@ -160,7 +160,7 @@ class Order extends BaseApi {
    */
   public function cancelOrder() {
   
-    return $this->dm->canceOrder($this->retriveRuleParams(__FUNCTION__));  
+    return $this->dm->cancelOrder($this->retriveRuleParams(__FUNCTION__));  
   
   }
 
