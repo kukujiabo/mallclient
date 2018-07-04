@@ -66,6 +66,14 @@ class Order extends BaseApi {
         'sku_id' => 'sku_id|int|true||skuid',
         'num' => 'num|int|true||数量'
       
+      ),
+
+      'cancelOrder' => array(
+      
+        'token' => 'token|string|true||用户令牌', 
+        'sn' => 'sn|string|true||订单编号', 
+        'comment' => 'comment|string|true||备注'
+      
       )
     
     ));
@@ -141,6 +149,18 @@ class Order extends BaseApi {
   public function orderAfterSale() {
   
     return $this->dm->orderAfterSale($this->retriveRuleParams(__FUNCTION__));
+  
+  }
+
+  /**
+   * 取消订单
+   * @desc 取消订单
+   *
+   * @return 
+   */
+  public function cancelOrder() {
+  
+    return $this->dm->canceOrder($this->retriveRuleParams(__FUNCTION__));  
   
   }
 

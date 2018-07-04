@@ -43,4 +43,10 @@ class OrderDm {
   
   }
 
+  public function cancelOrder($params) {
+  
+    return \App\apiRequest('App.OrderTakeOut.CancelOrder', $params);
+  
+  }
+
 }
