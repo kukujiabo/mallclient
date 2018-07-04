@@ -71,7 +71,7 @@ class Order extends BaseApi {
       'cancelOrder' => array(
       
         'token' => 'token|string|true||用户令牌', 
-        'sn' => 'sn|string|true||订单编号', 
+        'order_sn' => 'order_sn|string|true||订单编号', 
         'comment' => 'comment|string|true||备注'
       
       )
