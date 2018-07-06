@@ -12,15 +12,25 @@ class ConfigImage extends BaseApi {
   
     return $this->rules(array(
     
-      'getList' => array()
+      'getList' => array(
+      
+        'city_code' => 'city_code|string|false||城市编码'
+      
+      )
     
     ));
   
   }
 
+  /**
+   * 查询首页广告图列表
+   * @desc 查询首页广告图列表
+   *
+   * @return array list
+   */
   public function getList() {
   
-    return $this->dm->getList();  
+    return $this->dm->getList($this->retriveRuleParams(__FUNCTION__));  
   
   }
 

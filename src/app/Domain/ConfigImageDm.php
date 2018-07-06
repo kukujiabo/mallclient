@@ -3,17 +3,13 @@ namespace App\Domain;
 
 class ConfigImageDm {
 
-  public function getList() {
+  public function getList($data) {
 
-    $data = array(
-    
-      'module' => 1,
+    $data['module'] = 1;
 
-      'type' => 1,
+    $data['type'] = 1;
 
-      'state' => 1
-    
-    );
+    $data['state'] = 1;
   
     return \App\apiRequest('App.ConfigImage.GetList', $data);  
   
