@@ -8,13 +8,13 @@ class GoodsBrandDm {
    */
   public function getList($params) {
   
-    return \App\apiRequest('App.GoodsBrand.ListQuery', $params); 
+    return \App\apiRequest('App.GoodsBrand.CityList', $params); 
   
   }
 
   public function getDetail($params) {
   
-    return \App\apiRequest('App.GoodsBrand.CityList', $params);
+    return \App\apiRequest('App.GoodsBrand.GetDetail', $params);
   
   }
 
