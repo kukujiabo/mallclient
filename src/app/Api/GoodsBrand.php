@@ -16,6 +16,8 @@ class GoodsBrand extends BaseApi {
       
         'brand_name' => 'brand_name|string|false||品牌名称',
 
+        'city_code' => 'city_code|string|false||城市编码',
+
         'index_show' => 'index_show|int|false||是否首页展示'
       
       ),

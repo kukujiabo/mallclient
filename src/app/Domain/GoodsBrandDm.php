@@ -14,7 +14,7 @@ class GoodsBrandDm {
 
   public function getDetail($params) {
   
-    return \App\apiRequest('App.GoodsBrand.GetDetail', $params);
+    return \App\apiRequest('App.GoodsBrand.CityList', $params);
   
   }
 
