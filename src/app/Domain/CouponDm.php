@@ -87,7 +87,7 @@ class CouponDm {
 	//优惠券的列表。。。
 	public function getCouponList($data){
 
-    if (!$data['token']) {
+    if (!$data['token'] || $data['token'] === 'undefined') {
     
       return null;
     
