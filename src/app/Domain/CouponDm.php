@@ -86,36 +86,22 @@ class CouponDm {
 
 	//优惠券的列表。。。
 	public function getCouponList($data){
+
+    if (!$data['token']) {
+    
+      return null;
+    
+    }
 		
 		$params['token'] = $data['token'];
+
 		$params['page'] = $data['page'];
+
 		$params['page_size'] = $data['page_num'];
+
 		$params['is_relevance'] = '1';
 		
-		$res = \App\apiRequest('App.Coupon.QueryList',$params);
-		
-		/*$return['page'] = $res['page'];
-		$return['records'] =  $res['total'];
-		
-		foreach($res['list'] as $key => $val){
-			if ($val['deduction_type'] == 2){
-				$name = $val['money'];
-			}elseif ($val['deduction_type'] == 3){
-				$name = $val['coupon_name'];
-			}
-			
-			$return['data'][$key]['name'] = $name;
-			$return['data'][$key]['coupon_code'] = $val['coupon_code'];
-			$return['data'][$key]['title'] =$val['coupon_name'];
-			$return['data'][$key]['text'] =$val['at_least']==0?'无门槛':'满'.$val['at_least'].'可使用';
-			$return['data'][$key]['validity_from'] =$val['start_time'];
-			$return['data'][$key]['validity_to'] =$val['end_time'];
-			$return['data'][$key]['type'] = $val['deduction_type'];
-			$return['data'][$key]['status'] = $val['state'];
-			
-		}*/
-		
-		return $res ;
+		return \App\apiRequest('App.Coupon.QueryList',$params);
 
 	}
 	
