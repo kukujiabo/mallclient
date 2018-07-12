@@ -30,8 +30,6 @@ class WxConfigDm {
 		$params['iv'] = $data['iv'];
 		$params['session_key'] = $data['session_key'];
 		$params['appid'] = $data['appid'];
-		
-    return $params;
 		$res = \App\apiRequest('App.Member.DecryptData',$params);
 		return $res;
 
