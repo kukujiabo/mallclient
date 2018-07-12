@@ -133,4 +133,10 @@ class GoodsDm {
 
   }
 
+  public function getRecommendGoods($data) {
+  
+    return \App\apiRequest('App.Goods.GetRecommendList', $data);
+  
+  }
+
 }

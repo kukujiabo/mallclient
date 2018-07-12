@@ -42,6 +42,12 @@ class Goods extends BaseApi {
       
       ),
 
+      'getRecommendGoodsList' => array(
+      
+        'sn' => 'sn|string|true||订单编号'
+      
+      ),
+
       'getDetail' => array(
       
         'city_code' => 'city_code|int|false||城市代码',
@@ -229,6 +235,17 @@ class Goods extends BaseApi {
   public function cartPay() {
   
     return $this->dm->cartPay($this->retriveRuleParams(__FUNCTION__));
+  
+  }
+
+  /**
+   * 查询订单推荐商品
+   * @desc 查询订单推荐商品
+   *
+   */
+  public function getRecommendList() {
+  
+    return $this->dm->getRecommendList($this->retriveRuleParams(__FUNCTION__)); 
   
   }
 
