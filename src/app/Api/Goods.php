@@ -24,6 +24,8 @@ class Goods extends BaseApi {
 
         'category_id' => 'category_id|int|false||分类id',
 
+        'sign' => 'sign|string|false||标签',
+
         'brand_id' => 'brand_id|int|false||品牌id',
 
         'goods_name' => 'goods_name|string|false||商品名称',
