@@ -68,7 +68,7 @@ class Address extends BaseApi{
                   'token' => 'token|string|true||用户令牌',
                   'shop_id' => 'shop_id|int|false||门店id',
                   'page' => 'page|int|true|1|当前页码',
-                  'page_num' => 'page_num|int|true|60|每页数据条数',
+                  'page_size' => 'page_size|int|true|1000|每页数据条数',
               ),
               
                //全国地址库接口

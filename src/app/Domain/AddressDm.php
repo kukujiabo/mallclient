@@ -120,7 +120,7 @@ class AddressDm {
             $params['shop_id'] = $data['shop_id'];
         }
         $params['page'] = $data['page'];
-        $params['page_size'] = $data['page_num'];
+        $params['page_size'] = $data['page_size'];
         
         $res = \App\apiRequest('App.UserAddress.GetAddressList',$params);
         
