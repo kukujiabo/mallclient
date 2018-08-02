@@ -132,7 +132,7 @@ class UserDm {
    */
   public function getMemberAccountDetail($data) {
 
-    $res = \App\apiRequest('App.MemberAccount.GetDetail',$params);
+    $res = \App\apiRequest('App.MemberAccount.GetDetail',$data);
     
     $data['state'] = 1;
 
