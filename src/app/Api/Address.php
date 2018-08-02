@@ -84,6 +84,13 @@ class Address extends BaseApi{
                    'address_id' => 'address_id|int|true||地址库ID',
                    
                ),
+
+               'searchAllAddress' => array(
+               
+                   'token' => 'token|string|true||用户令牌',
+                   'content' => 'content|string|false||关键字'
+               
+               )
          ));
      }
 
@@ -280,6 +287,17 @@ class Address extends BaseApi{
 
         return $this->dm->editDefault($params);
 
-        
     }
+
+    /**
+     * 查询全部地址
+     * @desc 查询全部地址
+     *
+     */
+    public function searchAllAddress() {
+    
+      return $this->dm->searchAllAddress($this->retriveRuleParams(__FUNCTION__)); 
+    
+    }
+
 }

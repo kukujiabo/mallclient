@@ -176,4 +176,11 @@ class AddressDm {
         
         
     }
+
+    public function searchAllAddress($params) {
+    
+        return \App\apiRequest('App.UserAddress.SearchAllAddress',$params);
+
+    }
+    
 }
