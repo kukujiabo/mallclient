@@ -13,6 +13,7 @@ class HotGoods extends BaseApi {
     
       'getList' => array(
       
+        'token' => 'token|string|true||用户令牌',
         'city_code' => 'city_code|string|true||城市编码',
         'page' => 'page|int|false|1|页码|',
         'page_size' => 'page_size|int|false||每页条数',
