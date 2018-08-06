@@ -130,10 +130,10 @@ class AddressDm {
         foreach ($res['list'] as $key => $val){
             
             $return['data'][$key]['address_id'] = $val['id'];
-            //$return['data'][$key]['consigner'] = $val['consigner'];
-            //$return['data'][$key]['mobile'] = $val['mobile'];
-            $return['data'][$key]['name'] = $val['consigner'];
-            $return['data'][$key]['phone'] = $val['mobile'];
+            $return['data'][$key]['consigner'] = $val['consigner'];
+            $return['data'][$key]['mobile'] = $val['mobile'];
+            //$return['data'][$key]['name'] = $val['consigner'];
+            //$return['data'][$key]['phone'] = $val['mobile'];
             $return['data'][$key]['province'] = $val['province'];
             $return['data'][$key]['province_name'] =$val['province_name'];
             $return['data'][$key]['city'] = $val['city'];
