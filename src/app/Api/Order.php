@@ -74,6 +74,12 @@ class Order extends BaseApi {
         'order_sn' => 'order_sn|string|true||订单编号', 
         'comment' => 'comment|string|true||备注'
       
+      ),
+
+      'getOrderNum' => array(
+      
+        'token' => 'token|string|true||用户令牌'
+      
       )
     
     ));
@@ -161,6 +167,18 @@ class Order extends BaseApi {
   public function cancelOrder() {
   
     return $this->dm->cancelOrder($this->retriveRuleParams(__FUNCTION__));  
+  
+  }
+
+  /**
+   * 获取订单数量
+   * @desc 获取订单数量
+   *
+   * @return
+   */
+  public function getOrderNum() {
+  
+    return $this->dm->getOrderNum($this->retriveRuleParams(__FUNCTION__));
   
   }
 

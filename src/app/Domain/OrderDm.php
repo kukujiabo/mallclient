@@ -49,4 +49,10 @@ class OrderDm {
   
   }
 
+  public function getOrderNum($params) {
+  
+    return \App\apiRequest('App.OrderTakeOut.GetOrderNum', $params);
+  
+  }
+
 }
