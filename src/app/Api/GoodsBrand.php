@@ -28,6 +28,14 @@ class GoodsBrand extends BaseApi {
       
         'id' => 'id|int|true||品牌id'
       
+      ),
+
+      'getAll' => array(
+      
+        'brand_name' => 'brand_name|string|false||品牌名称',
+
+        'city_code' => 'city_code|string|false||城市编码'
+
       )
     
     ));
@@ -58,5 +66,17 @@ class GoodsBrand extends BaseApi {
   
   }
 
+
+  /**
+   * 获取全部品牌
+   * @desc 获取全部品牌
+   *
+   * @return array list
+   */
+  public function getAll() {
+  
+    return $this->dm->getAll($this->retriveRuleParams(__FUNCTION__));
+  
+  }
 
 }

@@ -18,4 +18,12 @@ class GoodsBrandDm {
   
   }
 
+  public function getAll($params) {
+
+    $params['all'] = 1;
+
+    return \App\apiRequest('App.GoodsBrand.GetList', $params);
+  
+  }
+
 }
