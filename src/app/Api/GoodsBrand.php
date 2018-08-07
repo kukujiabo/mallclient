@@ -18,7 +18,9 @@ class GoodsBrand extends BaseApi {
 
         'city_code' => 'city_code|string|false||城市编码',
 
-        'index_show' => 'index_show|int|false||是否首页展示'
+        'index_show' => 'index_show|int|false||是否首页展示',
+
+        'all' => 'all|int|false||是否获取全部'
       
       ),
 
@@ -55,5 +57,6 @@ class GoodsBrand extends BaseApi {
     return $this->dm->getDetail($this->retriveRuleParams(__FUNCTION__));
   
   }
+
 
 }
