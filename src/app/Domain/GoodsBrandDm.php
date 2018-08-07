@@ -22,7 +22,7 @@ class GoodsBrandDm {
 
     $params['all'] = 1;
 
-    return \App\apiRequest('App.GoodsBrand.GetList', $params);
+    return \App\apiRequest('App.GoodsBrand.ListQuery', $params);
   
   }
 
