@@ -137,6 +137,8 @@ class Goods extends BaseApi {
 
         'point' => 'point|int|false||使用的积分',
 
+        'coupon_id' => 'coupon_id|int|false||优惠券id',
+
         'buyer_message' => 'buyer_message|string|false||买家附言（备注）',
 
         'city_code' => 'city_code|int|false||城市编码',
