@@ -87,8 +87,8 @@ class AddressDm {
         if (!empty($res)) {
         
           $return['address_id'] = $res['id'];
-          $return['name'] = $res['consigner'];
-          $return['phone'] = $res['mobile'];
+          $return['consigner'] = $res['consigner'];
+          $return['mobile'] = $res['mobile'];
           $return['province'] = $res['province'];
           $return['province_name'] = $res['province_name'];
           $return['city'] = $res['city'];
