@@ -55,4 +55,10 @@ class OrderDm {
   
   }
 
+  public function getTransFirstLocation($params) {
+  
+    return \App\apiRequest('App.OrderTakeOut.GetTransFirstLocation', $params);
+  
+  }
+
 }
