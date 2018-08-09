@@ -139,4 +139,10 @@ class GoodsDm {
   
   }
 
+  public function getAllSignature($data) {
+  
+    return \App\apiRequest('App.GoodsSignature.GetAll', $data); 
+  
+  }
+
 }

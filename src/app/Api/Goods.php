@@ -149,6 +149,11 @@ class Goods extends BaseApi {
 
         'invoice' => 'invoice|int|false|0|发票'
 
+      ),
+
+      'getAllSignature' => array(
+      
+      
       )
 
     ));
@@ -248,6 +253,18 @@ class Goods extends BaseApi {
   public function getRecommendList() {
   
     return $this->dm->getRecommendList($this->retriveRuleParams(__FUNCTION__)); 
+  
+  }
+
+  /**
+   * 查询全部标签
+   * @desc 查询全部标签
+   *
+   * @return 
+   */
+  public function getAllSignature() {
+  
+    return $this->dm->getAllSignature($this->retriveRuleParams(__FUNCTION__));
   
   }
 
