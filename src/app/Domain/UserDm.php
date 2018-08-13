@@ -189,7 +189,7 @@ class UserDm {
   public function add($data){
     
     // $pc = new WXBizDataCrypt($appid, $sessionKey);
-    // $errCode = $pc->decryptData($data['encryptedData'], $data['iv'], $data );
+    // $errCode = $pc->decryptData($data['加密签名'], $data['iv'], $data );
     
       return true;
   }
@@ -524,6 +524,15 @@ class UserDm {
         if (isset($data['user_tel']) && $data['user_tel'] != '') {
             $params['user_tel'] = $data['user_tel'];
         }
+        if (isset($data['encryptedData']) && $data['encryptedData'] != '') {
+            $params['encryptedData'] = $data['encryptedData'];
+        }
+        if (isset($data['iv']) && $data['iv'] != '') {
+            $params['iv'] = $data['iv'];
+        }
+        if (isset($data['signature']) && $data['signature'] != '') {
+            $params['signature'] = $data['signature'];
+        }
 
 
         $res = \App\apiRequest('App.Member.Update',$params);
@@ -533,10 +542,15 @@ class UserDm {
         if ($res > 0){
 
             unset($params);
+
             $params['token'] = $data['token'];
+
             return $this->memberDetail($params) ;
+
         }else{
+
             return false;
+
         }
 
 

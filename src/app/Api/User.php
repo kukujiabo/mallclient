@@ -160,6 +160,9 @@ class User extends BaseApi {
                 'user_tel' => 'user_tel|string|false||手机号',
                 'birthday' => 'birthday|string|false||会员生日 ',
                 'location' => 'location|string|false||所在地',
+                'encryptedData' => 'encryptedData|string|false||加密信息',
+                'iv' => 'iv|string|false||加密密钥',
+                'signature' => 'signature|string|false||加密签名',
                 'sex' => 'sex|int|false||性别0-保密 1-男 2-女'
             ),
 
