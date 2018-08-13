@@ -533,6 +533,9 @@ class UserDm {
         if (isset($data['signature']) && $data['signature'] != '') {
             $params['signature'] = $data['signature'];
         }
+        if (isset($data['session_key']) && $data['session_key'] != '') {
+            $params['session_key'] = $data['session_key'];
+        }
 
 
         $res = \App\apiRequest('App.Member.Update',$params);
