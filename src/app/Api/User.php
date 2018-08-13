@@ -163,6 +163,7 @@ class User extends BaseApi {
                 'encryptedData' => 'encryptedData|string|false||加密信息',
                 'iv' => 'iv|string|false||加密密钥',
                 'signature' => 'signature|string|false||加密签名',
+                'session_key' => 'session_key|string|false||会话令牌',
                 'sex' => 'sex|int|false||性别0-保密 1-男 2-女'
             ),
 
