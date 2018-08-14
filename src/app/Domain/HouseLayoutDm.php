@@ -11,6 +11,8 @@ class HouseLayoutDm {
 
   public function getAll($data) {
   
+    $data['get_attr'] = 1;
+
     return \App\apiRequest('App.HouseLayout.GetAll', $data); 
   
   }
