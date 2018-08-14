@@ -12,6 +12,8 @@ class HouseLayout extends BaseApi {
     return $this->rules(array(
 
       'create' => array(
+
+        'token' => 'token|string|false||用户令牌',
     
         'layout_name' => 'layout_name|string|true||布局名称',
 
@@ -21,6 +23,8 @@ class HouseLayout extends BaseApi {
 
       'getAll' => array(
       
+        'token' => 'token|string|false||用户令牌',
+
       )
     
     ));
