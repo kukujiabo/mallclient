@@ -48,7 +48,7 @@ class Coupon extends BaseApi {
           ),
 		      //提领券明细
           'getDetail' => array(
-              'id_code' => 'id_code|string|true||识别码',
+              'code' => 'code|string|true||识别码',
           ),
           //获取优惠券列表
           'getCouponList' => array(
@@ -234,7 +234,9 @@ class Coupon extends BaseApi {
    * @return string msg 错误提示
    */
    public function getDetail(){
+
 	   $params = $this->retriveRuleParams('getDetail');
+
 	   return $this->CouponDm->getDetail($params);
 	   
    }
@@ -275,4 +277,5 @@ class Coupon extends BaseApi {
 	   return $this->CouponDm->getCouponList($params);
 	   
    }
+
 }

@@ -70,17 +70,8 @@ class CouponDm {
 
     public function getDetail($data){
 
-        return array(
-			'id' =>'1001',
-			'pic_address' => 'http://oyboujb2k.bkt.clouddn.com/tlcoupon.png',
-			'title' => '迪士尼中秋月饼限量版',
-			'id_code' => '4511452',
-			'condition' => '请在使用期前到门店兑换商品或在线配送商品',
-			'phone'	=> '400-12345678',
-			'qrcode' => 'http://oyboujb2k.bkt.clouddn.com/qrcode.png',
-			'collar_code' => '578690',
-			
-		);
+      return \App\apiRequest('App.Coupon.GetDetail', $data);
+
     }
 
 
