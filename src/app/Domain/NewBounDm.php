@@ -9,4 +9,10 @@ class NewBounDm {
   
   }
 
+  public function checkFetched($data) {
+  
+		return \App\apiRequest('App.NewBoun.CheckFetched', $data);
+  
+  }
+
 }

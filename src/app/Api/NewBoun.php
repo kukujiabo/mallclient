@@ -40,4 +40,10 @@ class NewBoun extends BaseApi {
   
   }
 
+  public function checkFetched() {
+  
+    return $this->dm->checkFetched($this->retriveRuleParams(__FUNCTION__));
+  
+  }
+
 }
