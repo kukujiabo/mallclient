@@ -19,6 +19,8 @@ class NewBoun extends BaseApi {
       ),
     
       'grantNew' => array(
+
+        'sequence' => 'sequence|string|true||序列号'
       
       )
     
