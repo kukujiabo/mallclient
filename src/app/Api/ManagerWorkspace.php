@@ -2,8 +2,7 @@
 namespace App\Api;
 
 /**
- * 工地接口
- * @desc 工地接口
+ * 项目经理接口
  *
  */
 class ManagerWorkspace extends BaseApi {
