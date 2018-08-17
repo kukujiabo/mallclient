@@ -88,6 +88,14 @@ class Order extends BaseApi {
 
         'order_id' => 'order_id|int|true||订单id'
         
+      ),
+
+      'getOrderAddress' => array(
+      
+        'token' => 'token|string|true||用户令牌',
+
+        'order_id' => 'order_id|int|true||订单id'
+      
       )
 
     ));
@@ -199,6 +207,18 @@ class Order extends BaseApi {
   public function getTransFirstLocation() {
   
     return $this->dm->getTransFirstLocation($this->retriveRuleParams(__FUNCTION__));
+  
+  }
+
+  /**
+   * 查询订单地址
+   * @desc 查询订单地址
+   *
+   * @return
+   */
+  public function getOrderAddress() {
+  
+    return $this->dm->getOrderAddress($this->retriveRuleParams(__FUNCTION__));
   
   }
 

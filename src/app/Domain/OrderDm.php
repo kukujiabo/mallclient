@@ -61,4 +61,10 @@ class OrderDm {
   
   }
 
+  public function getOrderAddress($params) {
+  
+    return \App\apiRequest('App.OrderTakeOutAddress.GetDetail', $params);
+  
+  }
+
 }
