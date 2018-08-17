@@ -59,15 +59,20 @@ class Coupon extends BaseApi {
               'coupon_code' => 'coupon_code|string|true||优惠券编码',
           ),
           'getAvailableCoupon' => array(
-              'shop_id' => 'shop_id|int|true||门店id',
-              'type' => 'type|int|true|1|下单类型 1-购物车下单 2-立即购买',
-              'cart_id' => 'cart_id|string|false||购物车id（多个用英文逗号隔开）',
-              'goods_id' => 'goods_id|int|false||商品id',
-              'sku_id' => 'sku_id|int|false||sku商品id',
-              'num' => 'num|int|false||购买数量',
-            ),
+            'shop_id' => 'shop_id|int|true||门店id',
+            'type' => 'type|int|true|1|下单类型 1-购物车下单 2-立即购买',
+            'cart_id' => 'cart_id|string|false||购物车id（多个用英文逗号隔开）',
+            'goods_id' => 'goods_id|int|false||商品id',
+            'sku_id' => 'sku_id|int|false||sku商品id',
+            'num' => 'num|int|false||购买数量',
+          ),
           'getAllType' => array(
           
+          
+          ),
+          'exchangeCoupon' => array(
+          
+            'coupon_type_id' => 'coupon_type_id|int|true||优惠券类型id'
           
           )
       ));
@@ -292,6 +297,18 @@ class Coupon extends BaseApi {
    public function getAllType() {
    
      return $this->CouponDm->getAllType($this->retriveRuleParams(__FUNCTION__));   
+   
+   }
+
+   /**
+    * 兑换优惠券
+    * @dexc 兑换优惠券
+    *
+    * @return int num
+    */
+   public function exchangeCoupon() {
+   
+     return $this->CouponDm->exchangeCoupon($this->retriveRuleParams(__FUNCTION__));
    
    }
 

@@ -101,5 +101,13 @@ class CouponDm {
     return \App\apiRequest('App.CouponType.GetAll', $params); 
   
   }
-	
-}
+
+  public function exchangeCoupon($params) {
+    
+    return \App\apiRequest('App.CouponType.ExchangeCoupon', $params);
+    
+  }
+	  
+}   
+    
+    
