@@ -95,5 +95,11 @@ class CouponDm {
 		return \App\apiRequest('App.Coupon.QueryList',$params);
 
 	}
+
+  public function getAllType($params) {
+  
+    return \App\apiRequest('App.CouponType.GetAll', $params); 
+  
+  }
 	
 }

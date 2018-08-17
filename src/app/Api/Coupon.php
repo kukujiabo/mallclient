@@ -65,7 +65,11 @@ class Coupon extends BaseApi {
               'goods_id' => 'goods_id|int|false||商品id',
               'sku_id' => 'sku_id|int|false||sku商品id',
               'num' => 'num|int|false||购买数量',
-          ),
+            ),
+          'getAllType' => array(
+          
+          
+          )
       ));
   }
 
@@ -276,6 +280,19 @@ class Coupon extends BaseApi {
 	   $params = $this->retriveRuleParams('getCouponList');
 	   return $this->CouponDm->getCouponList($params);
 	   
+   }
+
+
+   /**
+    * 获取全部优惠券种类
+    * @desc 获取全部优惠券种类
+    *
+    * @return array list
+    */
+   public function getAllType() {
+   
+     return $this->CouponDm->getAllType($this->retriveRuleParams(__FUNCTION__));   
+   
    }
 
 }
