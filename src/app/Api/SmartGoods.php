@@ -13,7 +13,7 @@ class SmartGoods extends BaseApi {
     
       'getGoods' => array(
 
-        'token' => 'token|string|false||用户令牌',
+        'token' => 'token|string|true||用户令牌',
       
         'sid' => 'sid|int|true||样式id',
 
