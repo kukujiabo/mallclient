@@ -13,12 +13,16 @@ class OrderTakeOutGoods extends BaseApi {
     return $this->rules(array(
     
       'getAll' => array(
+
+        'token' => 'token|string|true||用户令牌',
       
         'order_take_out_id' => 'order_take_out_id|int|true||订单id'
       
       ),
 
       'batchReturnGoods' => array(
+
+        'token' => 'token|string|true||用户令牌',
       
         'order_take_out_id' => 'order_take_out_id|int|true||订单id',
 
