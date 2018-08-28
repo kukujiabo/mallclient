@@ -16,6 +16,16 @@ class OrderTakeOutGoods extends BaseApi {
       
         'order_take_out_id' => 'order_take_out_id|int|true||订单id'
       
+      ),
+
+      'batchReturnGoods' => array(
+      
+        'order_take_out_id' => 'order_take_out_id|int|true||订单id',
+
+        'goods_id' => 'goods_id|string|true||商品id',
+
+        'num' => 'num|string|true||商品数量'
+      
       )
     
     ));
