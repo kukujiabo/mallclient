@@ -5,7 +5,7 @@ class OrderTakeOutGoodsDm {
 
   public function getAll($params) {
   
-    return \App\apiRequest('App.OrderTakeOutGoods.GetAll',$params);
+    return \App\apiRequest('App.OrderTakeOutGoods.GetAll', $params);
   
   }
 

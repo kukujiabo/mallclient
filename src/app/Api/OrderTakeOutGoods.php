@@ -2,7 +2,7 @@
 namespace App\Api;
 
 /**
- * 订单商品
+ * 订单商品接口
  *
  * @author Meroc Chen
  */
