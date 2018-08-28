@@ -34,4 +34,16 @@ class OrderTakeOutGoods extends BaseApi {
   
   }
 
+  /**
+   * 批量退货
+   * @desc 批量退货
+   *
+   * @return int num
+   */ 
+  public function batchReturnGoods() {
+  
+    return $this->dm->batchReturnGoods($this->retriveRuleParams(__FUNCTION__));
+  
+  }
+
 }

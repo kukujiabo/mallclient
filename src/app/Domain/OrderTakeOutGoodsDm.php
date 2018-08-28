@@ -9,4 +9,10 @@ class OrderTakeOutGoodsDm {
   
   }
 
+  public function batchReturnGoods($params) {
+  
+    return \App\apiRequest('App.OrderTakeOutGoods.GetAll', $params);
+  
+  }
+
 }
