@@ -6,7 +6,7 @@ namespace App\Api;
  *
  * @author Meroc Chen
  */
-class OrderTakeOutGood extends BaseApi {
+class OrderTakeOutGoods extends BaseApi {
 
   public function getRules() {
   
