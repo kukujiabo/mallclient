@@ -99,7 +99,7 @@ class Goods extends BaseApi {
 
         'sku_id' => 'sku_id|int|false||商品skuID',
 
-        'quantity' => 'quantity|int|true||商品数量',
+        'quantity' => 'quantity|float|true||商品数量',
 
         'user_money' => 'user_money|float|false||使用的余额',
 
